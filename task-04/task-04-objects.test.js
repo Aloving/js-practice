@@ -1,3 +1,5 @@
+// @no-ai-suggestions
+// @disable-autocomplete
 const { EventEmitter } = require('./task-04-objects.js');
 
 describe('Task 4: Работа с объектами и прототипами', () => {

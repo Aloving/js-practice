@@ -1,3 +1,5 @@
+// @no-ai-suggestions
+// @disable-autocomplete
 const { createCounter } = require('./task-02-intermediate.js');
 
 describe('Task 2: Замыкания и каррирование', () => {

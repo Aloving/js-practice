@@ -1,3 +1,5 @@
+// @no-ai-suggestions
+// @disable-autocomplete
 const { processNumbers } = require('./task-01-basic.js');
 
 describe('Task 1: Работа с массивами и функциями', () => {

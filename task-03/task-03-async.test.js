@@ -1,3 +1,5 @@
+// @no-ai-suggestions
+// @disable-autocomplete
 const { fetchUserData, fetchUserDataWithTimeout } = require('./task-03-async.js');
 
 describe('Task 3: Асинхронный JavaScript', () => {

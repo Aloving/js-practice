@@ -23,6 +23,15 @@
 - `task-06/` - TypeScript (типы и интерфейсы)
   - `task-06-typescript.ts` - файл с задачей
   - `task-06-typescript.test.ts` - тесты для задачи
+- `task-07/` - TypeScript (Generics и Utility Types)
+  - `task-07-typescript.ts` - файл с задачей
+  - `task-07-typescript.test.ts` - тесты для задачи
+- `task-08/` - TypeScript (Условные типы и Mapped Types)
+  - `task-08-typescript.ts` - файл с задачей
+  - `task-08-typescript.test.ts` - тесты для задачи
+- `task-09/` - TypeScript (Discriminated Unions и Type Guards)
+  - `task-09-typescript.ts` - файл с задачей
+  - `task-09-typescript.test.ts` - тесты для задачи
 
 ## Установка
 
@@ -65,6 +74,9 @@ node task-05/task-05-advanced-async.js
 
 # Для TypeScript задач нужно скомпилировать или использовать ts-node
 npx ts-node task-06/task-06-typescript.ts
+npx ts-node task-07/task-07-typescript.ts
+npx ts-node task-08/task-08-typescript.ts
+npx ts-node task-09/task-09-typescript.ts
 ```
 
 ## Темы для изучения
@@ -75,6 +87,9 @@ npx ts-node task-06/task-06-typescript.ts
 - ✅ Работа с объектами и прототипами (EventEmitter)
 - ✅ Продвинутый async (debounce, throttle, retry, promiseQueue)
 - ✅ TypeScript (типы и интерфейсы)
+- ✅ TypeScript (Generics и Utility Types)
+- ✅ TypeScript (Условные типы и Mapped Types)
+- ✅ TypeScript (Discriminated Unions и Type Guards)
 - 🔜 React
 
 ## Инструменты

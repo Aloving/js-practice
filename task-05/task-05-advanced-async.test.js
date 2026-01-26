@@ -1,3 +1,5 @@
+// @no-ai-suggestions
+// @disable-autocomplete
 const { debounce, throttle, retry, promiseQueue } = require('./task-05-advanced-async.js');
 
 describe('Task 5: Продвинутый асинхронный JavaScript', () => {
