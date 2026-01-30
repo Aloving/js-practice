@@ -32,6 +32,30 @@
 - `task-09/` - TypeScript (Discriminated Unions и Type Guards)
   - `task-09-typescript.ts` - файл с задачей
   - `task-09-typescript.test.ts` - тесты для задачи
+- `task-10/` - JavaScript (Proxy и Reflect API)
+  - `task-10-advanced-js.js` - файл с задачей
+  - `task-10-advanced-js.test.js` - тесты для задачи
+- `task-11/` - JavaScript (WeakMap, WeakSet, Symbol)
+  - `task-11-advanced-js.js` - файл с задачей
+  - `task-11-advanced-js.test.js` - тесты для задачи
+- `task-12/` - JavaScript (Генераторы и итераторы)
+  - `task-12-advanced-js.js` - файл с задачей
+  - `task-12-advanced-js.test.js` - тесты для задачи
+- `task-13/` - TypeScript (Template Literal Types и String Manipulation)
+  - `task-13-typescript.ts` - файл с задачей
+  - `task-13-typescript.test.ts` - тесты для задачи
+- `task-14/` - TypeScript (Recursive Types и Type-level Programming)
+  - `task-14-typescript.ts` - файл с задачей
+  - `task-14-typescript.test.ts` - тесты для задачи
+- `task-15/` - TypeScript (Branded Types и Nominal Typing)
+  - `task-15-typescript.ts` - файл с задачей
+  - `task-15-typescript.test.ts` - тесты для задачи
+- `task-16/` - React (Custom Hooks и State Management)
+  - `task-16-react.tsx` - файл с задачей
+  - `task-16-react.test.tsx` - тесты для задачи
+- `task-17/` - React (Context API и Performance Optimization)
+  - `task-17-react.tsx` - файл с задачей
+  - `task-17-react.test.tsx` - тесты для задачи
 
 ## Установка
 
@@ -77,6 +101,9 @@ npx ts-node task-06/task-06-typescript.ts
 npx ts-node task-07/task-07-typescript.ts
 npx ts-node task-08/task-08-typescript.ts
 npx ts-node task-09/task-09-typescript.ts
+npx ts-node task-13/task-13-typescript.ts
+npx ts-node task-14/task-14-typescript.ts
+npx ts-node task-15/task-15-typescript.ts
 ```
 
 ## Темы для изучения
@@ -90,10 +117,19 @@ npx ts-node task-09/task-09-typescript.ts
 - ✅ TypeScript (Generics и Utility Types)
 - ✅ TypeScript (Условные типы и Mapped Types)
 - ✅ TypeScript (Discriminated Unions и Type Guards)
-- 🔜 React
+- ✅ JavaScript (Proxy и Reflect API)
+- ✅ JavaScript (WeakMap, WeakSet, Symbol)
+- ✅ JavaScript (Генераторы и итераторы)
+- ✅ TypeScript (Template Literal Types и String Manipulation)
+- ✅ TypeScript (Recursive Types и Type-level Programming)
+- ✅ TypeScript (Branded Types и Nominal Typing)
+- ✅ React (Custom Hooks и State Management)
+- ✅ React (Context API и Performance Optimization)
 
 ## Инструменты
 
 - **Jest** - фреймворк для тестирования
 - **ESLint** - линтер для проверки качества кода
+- **React Testing Library** - библиотека для тестирования React компонентов
+- **TypeScript** - типизированный JavaScript
 

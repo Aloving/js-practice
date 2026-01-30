@@ -37,6 +37,8 @@
  * readonlyConfig.apiUrl = 'new'; // ошибка компиляции
  */
 
+import { ReadonlyDeep } from "./task-08-typescript-no-types";
+
 // ВАШЕ РЕШЕНИЕ ЗДЕСЬ
 // Определите здесь:
 // - тип NonNullable<T>
@@ -46,6 +48,38 @@
 // - функцию deepReadonly<T>(obj: T): ReadonlyDeep<T>
 // - тип FunctionKeys<T>
 // - функцию getFunctionKeys<T>(obj: T): Array<FunctionKeys<T>>
+
+type NonNullable<T> = T extends null | undefined ? never : T;
+type KeysOfType<T, U> = {
+  [K in keyof T]: T[K] extends U ? K : never;
+}[keyof T];
+type ReadonlyDeep<T> = {
+  readonly [P in keyof T]: T[P] extends object
+    ? T[P] extends (...args: any[]) => any
+      ? T[P]
+      : ReadonlyDeep<T[P]>
+    : T[P];
+};
+
+type FunctionKeys<T> = {
+  [K in keyof T]-?: Exclude<T[K], undefined> extends (...args: any[]) => any
+    ? K
+    : never;
+}[keyof T];
+
+const filterNulls = <T>(items: T[]): NonNullable<T>[] => {
+  return items.filter((item) => item) as NonNullable<T>[];
+};
+
+const deepReadonly = <T>(obj: T): ReadonlyDeep<T> => {
+  return Object.freeze(obj);
+};
+
+const getFunctionKeys = <T extends object>(obj: T): Array<FunctionKeys<T>> => {
+  return Object.entries(obj)
+    .filter(([key, value]) => typeof value === "function")
+    .map(([key, value]) => key as FunctionKeys<T>);
+};
 
 // Тесты для проверки
 interface Config {
