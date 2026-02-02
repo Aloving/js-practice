@@ -57,36 +57,64 @@ const createValidator = (target, schema) => {
 };
 
 const createCache = (target, ttl = 1000) => {
-  const a = {
-    fn(a, b){},
-    fn1() {}
-  }
-
-  const bound = {
-    fn: () => {
-
-    }
-
-    cache: {
-      fn: {
-        calls: [
-          [10, 20]
-        ]
+  const cache = Object.entries(target).reduce((acc, [key]) => {
+    return {
+      ...acc,
+      [key]: {
+        calls: {},
       },
-      fn1: {
-        calls: [
-          10, 21
-        ]
-      }
-    }
-  }
+    };
+  }, {});
+
+  return new Proxy(target, {
+    get(target, prop, receiver) {
+      const fn = target[prop];
+
+      const cachedFn = (...args) => {
+        const serializedArgs = args.join(":");
+
+        if (cache[prop].calls[serializedArgs]) {
+          return cache[prop].calls[serializedArgs];
+        } else {
+          const result = fn(...args);
+
+          cache[prop] = {
+            calls: {
+              ...cache[prop].calls,
+              [serializedArgs]: result,
+            },
+          };
+
+          setTimeout(() => {
+            delete cache[prop].calls[serializedArgs];
+          }, ttl);
+
+          return result;
+        }
+      };
+
+      return cachedFn;
+    },
+  });
 };
 
-createCache({
-  fn: (a, b) => a + b
-},1000);
+const createImmutable = (target) => {
+  const errorText = "Cannot modify immutable object";
 
-const createImmutable = () => {};
+  return new Proxy(target, {
+    set(target, prop, value) {
+      throw new TypeError(errorText);
+    },
+
+    deleteProperty(target, prop) {
+      throw new TypeError(errorText);
+    },
+
+    defineProperty(target, prop, descriptor) {
+      throw new TypeError(errorText);
+    },
+  });
+};
 
 module.exports = {
   createReactiveObject,
