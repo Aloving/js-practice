@@ -24,4 +24,6 @@
 
 // ВАШЕ РЕШЕНИЕ ЗДЕСЬ
 
+сщт
+
 module.exports = { createRangeIterator, createFibonacciGenerator, createAsyncGenerator, createChunkGenerator, createCombinationGenerator };

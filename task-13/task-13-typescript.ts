@@ -18,4 +18,17 @@
 
 // ВАШЕ РЕШЕНИЕ ЗДЕСЬ
 
-export { TemplateLiteral, StringManipulation };
+type Join<T extends string[], D extends string> = T extends [
+  infer F extends string,
+  ...infer R extends [],
+]
+  ? R extends []
+    ? F
+    : `${F}${D}${Join<R, D>}`
+  : "";
+
+type Split<S extends string, D extends string> = S extends ""
+  ? []
+  : S extends `${infer F}${D}${infer R}`
+    ? [F, ...Split<R, D>]
+    : [S];

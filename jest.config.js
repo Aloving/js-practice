@@ -1,12 +1,18 @@
 module.exports = {
     testEnvironment: 'node',
-    testMatch: ['**/task-*/**/*.test.js', '**/task-*/**/*.test.ts', '**/task-*/**/*.test.tsx'],
+    testMatch: [
+        '**/task-*/**/*.test.js',
+        '**/task-*/**/*.test.cjs',
+        '**/task-*/**/*.test.ts',
+        '**/task-*/**/*.test.tsx'
+    ],
     collectCoverageFrom: [
         'task-*/**/*.js',
         'task-*/**/*.ts',
         'task-*/**/*.tsx',
         '!**/node_modules/**',
         '!**/*.test.js',
+        '!**/*.test.cjs',
         '!**/*.test.ts',
         '!**/*.test.tsx'
     ],
@@ -15,7 +21,11 @@ module.exports = {
     projects: [
         {
             displayName: 'node',
-            testMatch: ['**/task-*/**/*.test.js', '**/task-*/**/*.test.ts'],
+            testMatch: [
+                '**/task-*/**/*.test.js',
+                '**/task-*/**/*.test.cjs',
+                '**/task-*/**/*.test.ts'
+            ],
             testEnvironment: 'node',
             preset: 'ts-jest',
             transform: {

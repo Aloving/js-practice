@@ -10,6 +10,9 @@
     "lint": "eslint task-*/**/*.js",
     "lint:fix": "eslint task-*/**/*.js --fix"
   },
+  "dependencies": {
+    "rxjs": "^7.8.2"
+  },
   "keywords": [
     "javascript",
     "practice",

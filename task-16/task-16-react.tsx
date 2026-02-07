@@ -14,15 +14,15 @@
 4. Реализуйте поиск с debounce и сохранение в localStorage
  */
 
-import React from 'react';
+import React from "react";
 
 // ВАШЕ РЕШЕНИЕ ЗДЕСЬ
 
 export const Task16: React.FC = () => {
-    return (
-        <div>
-            <h1>Task 16: Custom Hooks и State Management</h1>
-            {/* Ваша реализация здесь */}
-        </div>
-    );
+  return (
+    <div>
+      <h1>Task 16: Custom Hooks и State Management</h1>
+      {/* Ваша реализация здесь */}
+    </div>
+  );
 };
