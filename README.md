@@ -5,6 +5,16 @@
 ## Структура
 
 Каждая задача находится в отдельной папке:
+
+- `task-interview/` - Задачи с собеседований (JS/TS, базовый-средний)
+  - `task-interview-01-two-sum.js` - Two Sum (собеседование)
+  - `task-interview-01-two-sum.test.js` - тесты (собеседование)
+  - `task-interview-02-chunk-array.js` - Chunk Array (собеседование)
+  - `task-interview-02-chunk-array.test.js` - тесты (собеседование)
+  - `task-interview-03-two-sum.ts` - Two Sum (TypeScript, собеседование)
+  - `task-interview-03-two-sum.test.ts` - тесты (собеседование)
+  - `task-interview-04-chunk-array.ts` - Chunk Array (TypeScript, собеседование)
+  - `task-interview-04-chunk-array.test.ts` - тесты (собеседование)
 - `task-01/` - Базовые задачи (массивы, функции)
   - `task-01-basic.js` - файл с задачей
   - `task-01-basic.test.js` - тесты для задачи
@@ -56,6 +66,9 @@
 - `task-17/` - React (Context API и Performance Optimization)
   - `task-17-react.tsx` - файл с задачей
   - `task-17-react.test.tsx` - тесты для задачи
+- `task-18/` - RxJS (Observables и Operators)
+  - `task-18-rxjs.js` - файл с задачей
+  - `task-18-rxjs.test.cjs` - тесты для задачи
 
 ## Установка
 
@@ -113,13 +126,15 @@ npx ts-node task-15/task-15-typescript.ts
 - ✅ Асинхронный JavaScript (Promise, async/await)
 - ✅ Работа с объектами и прототипами (EventEmitter)
 - ✅ Продвинутый async (debounce, throttle, retry, promiseQueue)
+- ✅ JavaScript (Proxy и Reflect API)
+- ✅ JavaScript (WeakMap, WeakSet, Symbol)
+- ✅ JavaScript (Генераторы и итераторы)
+- ⬜ RxJS (Observables, Subjects, Operators)
+- ⬜ RxJS (Schedulers, multicasting, error handling)
 - ✅ TypeScript (типы и интерфейсы)
 - ✅ TypeScript (Generics и Utility Types)
 - ✅ TypeScript (Условные типы и Mapped Types)
 - ✅ TypeScript (Discriminated Unions и Type Guards)
-- ✅ JavaScript (Proxy и Reflect API)
-- ✅ JavaScript (WeakMap, WeakSet, Symbol)
-- ✅ JavaScript (Генераторы и итераторы)
 - ✅ TypeScript (Template Literal Types и String Manipulation)
 - ✅ TypeScript (Recursive Types и Type-level Programming)
 - ✅ TypeScript (Branded Types и Nominal Typing)
@@ -132,4 +147,3 @@ npx ts-node task-15/task-15-typescript.ts
 - **ESLint** - линтер для проверки качества кода
 - **React Testing Library** - библиотека для тестирования React компонентов
 - **TypeScript** - типизированный JavaScript
-
