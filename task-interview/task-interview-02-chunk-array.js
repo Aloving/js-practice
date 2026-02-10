@@ -16,31 +16,28 @@
  * chunkArray([1, 2, 3], 4) => [[1, 2, 3]]
  */
 
-// function chunkArrayByCycle(items, size) {
-//   // TODO: реализуйте
-//   const result = [];
-//   let intermediate = [];
+function chunkArray(items, size) {
+  if (size <= 0) return [];
 
-//   for (let i = 0; i < items.length - 1; i++) {
-//     intermediate.push(items[i]);
+  const result = [];
+  const chunksCount = Math.ceil(items.length / size);
 
-//     console.log("intermediate.length", intermediate.length);
+  for (let i = 0; chunksCount > i; i++) {
+    const intermediate = items.slice(i * size, i * size + size);
 
-//     if (intermediate.length === size) {
-//       result.push(intermediate);
-//       intermediate = [];
-//       continue;
-//     }
+    result.push(intermediate);
+  }
 
-//     if (i === items.length - 1 && intermediate.length) {
-//       result.push(intermediate);
-//     }
-//   }
+  return result;
+}
 
-//   return result;
-// }
-
-function chunkArray(items, size, result = [], intermediate = [], cursor = 0) {
+function chunkArrayRecursively(
+  items,
+  size,
+  result = [],
+  intermediate = [],
+  cursor = 0
+) {
   if (size <= 0) {
     return [];
   }

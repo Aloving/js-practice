@@ -4,6 +4,11 @@ const { chunkArray } = require("./task-interview-02-chunk-array.js");
 
 describe("Task Interview 2: Chunk Array", () => {
   test("разбивает массив на чанки заданного размера", () => {
+    console.log(
+      "chunkArray([1, 2, 3, 4, 5], 2)",
+      chunkArray([1, 2, 3, 4, 5], 2)
+    );
+
     expect(chunkArray([1, 2, 3, 4, 5], 2)).toEqual([[1, 2], [3, 4], [5]]);
   });
 

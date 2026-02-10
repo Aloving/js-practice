@@ -22,11 +22,11 @@ function debounce(func, delay) {
   let timeout;
 
   return (...args) => {
-    if (!timeout) {
-      timeout = setTimeout(() => {
-        func(...args);
-      }, delay);
-    }
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+      func(...args);
+    }, delay);
 
     return;
   };
