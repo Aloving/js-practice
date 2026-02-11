@@ -1,6 +1,14 @@
 // @no-ai-suggestions
 // @disable-autocomplete
-const { debounce, throttle, retry, promiseQueue } = require('./task-05-advanced-async.js');
+const {
+  debounce,
+  throttle,
+  retry,
+  promiseQueue,
+  runSequentially,
+  runSequentiallyReduce,
+  runSequentiallyRecursive,
+} = require('./task-05-advanced-async.js');
 
 describe('Task 5: Продвинутый асинхронный JavaScript', () => {
     describe('debounce', () => {
@@ -76,6 +84,55 @@ describe('Task 5: Продвинутый асинхронный JavaScript', () 
 
             const results = await promiseQueue(tasks, 1);
             expect(results).toEqual([1, 2, 3]);
+        });
+    });
+
+    describe('runSequentially', () => {
+        test('должен выполнять задачи по одной и возвращать результаты по порядку', async () => {
+            const order = [];
+            const tasks = [
+                () => new Promise((r) => setTimeout(() => { order.push(1); r(1); }, 20)),
+                () => new Promise((r) => setTimeout(() => { order.push(2); r(2); }, 10)),
+                () => new Promise((r) => setTimeout(() => { order.push(3); r(3); }, 5)),
+            ];
+
+            const results = await runSequentially(tasks);
+            expect(results).toEqual([1, 2, 3]);
+            expect(order).toEqual([1, 2, 3]);
+        });
+
+        test('работает с массивом промисов (не только с функциями)', async () => {
+            const results = await runSequentially([
+                Promise.resolve(10),
+                Promise.resolve(20),
+            ]);
+            expect(results).toEqual([10, 20]);
+        });
+    });
+
+    describe('runSequentiallyReduce', () => {
+        test('ведёт себя как runSequentially', async () => {
+            const order = [];
+            const tasks = [
+                () => new Promise((r) => setTimeout(() => { order.push(1); r(1); }, 15)),
+                () => new Promise((r) => setTimeout(() => { order.push(2); r(2); }, 5)),
+            ];
+            const results = await runSequentiallyReduce(tasks);
+            expect(results).toEqual([1, 2]);
+            expect(order).toEqual([1, 2]);
+        });
+    });
+
+    describe('runSequentiallyRecursive', () => {
+        test('ведёт себя как runSequentially', async () => {
+            const order = [];
+            const tasks = [
+                () => new Promise((r) => setTimeout(() => { order.push(1); r(1); }, 15)),
+                () => new Promise((r) => setTimeout(() => { order.push(2); r(2); }, 5)),
+            ];
+            const results = await runSequentiallyRecursive(tasks);
+            expect(results).toEqual([1, 2]);
+            expect(order).toEqual([1, 2]);
         });
     });
 });

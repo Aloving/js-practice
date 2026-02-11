@@ -16,6 +16,10 @@
  *
  * 4. promiseQueue(tasks, concurrency) - выполняет массив промисов с ограничением
  *    на количество одновременно выполняемых задач.
+ *
+ * 5. runSequentially(tasks) - выполняет массив промисов (или функций, возвращающих
+ *    промисы) строго по одному, по порядку, и возвращает массив результатов.
+ *    Реализовать в нескольких вариантах.
  */
 
 function debounce(func, delay) {
@@ -96,4 +100,57 @@ async function promiseQueue(tasks, concurrency = 1) {
   });
 }
 
-module.exports = { debounce, throttle, retry, promiseQueue };
+// --- 5. runSequentially: последовательное выполнение промисов ---
+
+// Вариант 1: async/await с for...of
+async function runSequentially(tasks) {
+  const result = [];
+
+  for (const task of tasks) {
+    try {
+      const value = typeof task === "function" ? await task() : await task;
+
+      result.push(value);
+    } catch (e) {
+      console.error("Ошибка в задаче:", error);
+      // Можно либо прервать цикл (break), либо запушить ошибку в результаты
+      results.push(null);
+    }
+  }
+
+  return result;
+}
+
+// Вариант 2: reduce — цепочка промисов
+function runSequentiallyReduce(tasks) {
+  return tasks.reduce((promiseChain, currentTask) => {
+    return promiseChain.then((results) => {
+      return currentTask().then((currentResult) => {
+        return [...results, currentResult];
+      });
+    });
+  }, Promise.resolve([]));
+}
+
+// Вариант 3: рекурсия
+async function runSequentiallyRecursive(tasks) {
+  if (tasks.length === 0) return Promise.resolve([]);
+
+  const task = tasks.shift();
+
+  return task().then((result) => {
+    return runSequentiallyRecursive(tasks).then((nextResult) => {
+      return [result, ...nextResult];
+    });
+  });
+}
+
+module.exports = {
+  debounce,
+  throttle,
+  retry,
+  promiseQueue,
+  runSequentially,
+  runSequentiallyReduce,
+  runSequentiallyRecursive,
+};
