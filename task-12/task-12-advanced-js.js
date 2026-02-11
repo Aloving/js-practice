@@ -24,6 +24,49 @@
 
 // ВАШЕ РЕШЕНИЕ ЗДЕСЬ
 
-сщт
+function* createRangeIterator(start, end, step) {
+  let count = 0;
 
-module.exports = { createRangeIterator, createFibonacciGenerator, createAsyncGenerator, createChunkGenerator, createCombinationGenerator };
+  if (start > 0) {
+    while (start <= end) {
+      count += step;
+
+      yield count;
+    }
+  }
+
+  if (start < 0) {
+    while (start >= end) {
+      count += step;
+
+      yield count;
+    }
+  }
+}
+
+function* createFibonacciGenerator() {
+  let a = 0;
+  let b = 1;
+
+  while (true) {
+    yield a;
+
+    [a, b] = [b, a + b];
+  }
+}
+
+function* createAsyncGenerator(asyncFn, items) {
+  for (const item of items) {
+    yield asyncFn(item);
+  }
+}
+function* createChunkGenerator(array, chunkSize) {}
+function* createCombinationGenerator() {}
+
+module.exports = {
+  createRangeIterator,
+  createFibonacciGenerator,
+  createAsyncGenerator,
+  createChunkGenerator,
+  createCombinationGenerator,
+};

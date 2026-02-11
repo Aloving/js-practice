@@ -13,6 +13,21 @@
  */
 
 export const chunkArray = <T>(items: T[], size: number): T[][] => {
-  // TODO: реализуйте
-  throw new Error("Not implemented");
+  if (size <= 0) return [];
+
+  return items.reduce((acc, cur, index, array) => {
+    if (acc[0]) {
+      const cursorArr = acc[acc.length - 1];
+
+      if (cursorArr.length === size) {
+        return [...acc, [cur]];
+      }
+
+      cursorArr.push(cur);
+
+      return acc;
+    }
+
+    return [[cur]];
+  }, [] as T[][]);
 };
