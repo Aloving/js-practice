@@ -33,6 +33,10 @@
 | task-21 (WeakRef, FinalizationRegistry) | ✅ |
 | task-22 (ArrayBuffer, TypedArrays, DataView) | ✅ |
 | task-23 (Intl, RegExp — интернационализация и регулярные выражения) | ✅ |
+| task-24 (алгоритмы: бинарный поиск, средний) | ✅ |
+| task-25 (алгоритмы: скользящее окно, два указателя, средний) | ✅ |
+| task-26 (алгоритмы: динамическое программирование, высокий) | ✅ |
+| task-27 (алгоритмы: графы, BFS, высокий) | ✅ |
 
 ## Структура
 
@@ -124,6 +128,18 @@
 - `task-23/` - JavaScript (Intl, RegExp — интернационализация и регулярные выражения)
   - `task-23-advanced-js.js` - форматирование, named groups, match indices
   - `task-23-advanced-js.test.js` - тесты для задачи
+- `task-24/` - Алгоритмы: бинарный поиск (средний уровень)
+  - `task-24-algorithms-binary-search.js` - binarySearch, findFirst, findLast, searchInRotatedSorted
+  - `task-24-algorithms-binary-search.test.js` - тесты для задачи
+- `task-25/` - Алгоритмы: скользящее окно и два указателя (средний уровень)
+  - `task-25-algorithms-sliding-window.js` - maxSumSubarray, lengthOfLongestSubstring, twoSumSorted, minSubArrayLen
+  - `task-25-algorithms-sliding-window.test.js` - тесты для задачи
+- `task-26/` - Алгоритмы: динамическое программирование (высокий уровень)
+  - `task-26-algorithms-dp.js` - climbStairs, coinChange, longestIncreasingSubsequence, maxSubArray
+  - `task-26-algorithms-dp.test.js` - тесты для задачи
+- `task-27/` - Алгоритмы: графы и BFS (высокий уровень)
+  - `task-27-algorithms-graphs.js` - shortestPathInGrid, numIslands, bfsLevelOrder, hasPath
+  - `task-27-algorithms-graphs.test.js` - тесты для задачи
 
 ## Установка
 
@@ -198,6 +214,10 @@ npx ts-node task-15/task-15-typescript.ts
 - ✅ JavaScript (WeakRef и FinalizationRegistry) — task-21
 - ✅ JavaScript (ArrayBuffer, TypedArrays, DataView) — task-22
 - ✅ JavaScript (Intl, RegExp — интернационализация и регулярные выражения) — task-23
+- ✅ Алгоритмы: бинарный поиск (средний) — task-24
+- ✅ Алгоритмы: скользящее окно, два указателя (средний) — task-25
+- ✅ Алгоритмы: динамическое программирование (высокий) — task-26
+- ✅ Алгоритмы: графы, BFS (высокий) — task-27
 
 ## Инструменты
 
