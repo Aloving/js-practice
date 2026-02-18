@@ -37,6 +37,8 @@
 | task-25 (алгоритмы: скользящее окно, два указателя, средний) | ✅ |
 | task-26 (алгоритмы: динамическое программирование, высокий) | ✅ |
 | task-27 (алгоритмы: графы, BFS, высокий) | ✅ |
+| task-28 (структуры данных: Trie, продвинутый) | ✅ |
+| task-29 (структуры данных: MinHeap, продвинутый) | ✅ |
 
 ## Структура
 
@@ -140,6 +142,12 @@
 - `task-27/` - Алгоритмы: графы и BFS (высокий уровень)
   - `task-27-algorithms-graphs.js` - shortestPathInGrid, numIslands, bfsLevelOrder, hasPath
   - `task-27-algorithms-graphs.test.js` - тесты для задачи
+- `task-28/` - Структуры данных: Trie (префиксное дерево), продвинутый уровень
+  - `task-28-data-structures-trie.js` - класс Trie: insert, search, startsWith, getWordsWithPrefix
+  - `task-28-data-structures-trie.test.js` - тесты для задачи
+- `task-29/` - Структуры данных: MinHeap (куча минимума), продвинутый уровень
+  - `task-29-data-structures-minheap.js` - класс MinHeap: insert, extractMin, peek, size
+  - `task-29-data-structures-minheap.test.js` - тесты для задачи
 
 ## Установка
 
@@ -218,6 +226,8 @@ npx ts-node task-15/task-15-typescript.ts
 - ✅ Алгоритмы: скользящее окно, два указателя (средний) — task-25
 - ✅ Алгоритмы: динамическое программирование (высокий) — task-26
 - ✅ Алгоритмы: графы, BFS (высокий) — task-27
+- ✅ Структуры данных: Trie (префиксное дерево), продвинутый — task-28
+- ✅ Структуры данных: MinHeap (куча минимума), продвинутый — task-29
 
 ## Инструменты
 
