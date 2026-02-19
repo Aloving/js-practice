@@ -39,6 +39,8 @@
 | task-27 (алгоритмы: графы, BFS, высокий) | ✅ |
 | task-28 (структуры данных: Trie, продвинутый) | ✅ |
 | task-29 (структуры данных: MinHeap, продвинутый) | ✅ |
+| task-30 (структуры данных: Disjoint Set / Union-Find, продвинутый) | ✅ |
+| task-31 (структуры данных: LFU Cache, продвинутый) | ✅ |
 
 ## Структура
 
@@ -148,6 +150,12 @@
 - `task-29/` - Структуры данных: MinHeap (куча минимума), продвинутый уровень
   - `task-29-data-structures-minheap.js` - класс MinHeap: insert, extractMin, peek, size
   - `task-29-data-structures-minheap.test.js` - тесты для задачи
+- `task-30/` - Структуры данных: Disjoint Set (Union-Find), продвинутый уровень
+  - `task-30-data-structures-union-find.js` - класс DisjointSet: makeSet, find, union, areConnected
+  - `task-30-data-structures-union-find.test.js` - тесты для задачи
+- `task-31/` - Структуры данных: LFU Cache (Least Frequently Used), продвинутый уровень
+  - `task-31-data-structures-lfu-cache.js` - класс LFUCache: get, set
+  - `task-31-data-structures-lfu-cache.test.js` - тесты для задачи
 
 ## Установка
 
@@ -228,6 +236,8 @@ npx ts-node task-15/task-15-typescript.ts
 - ✅ Алгоритмы: графы, BFS (высокий) — task-27
 - ✅ Структуры данных: Trie (префиксное дерево), продвинутый — task-28
 - ✅ Структуры данных: MinHeap (куча минимума), продвинутый — task-29
+- ✅ Структуры данных: Disjoint Set (Union-Find), продвинутый — task-30
+- ✅ Структуры данных: LFU Cache, продвинутый — task-31
 
 ## Инструменты
 
