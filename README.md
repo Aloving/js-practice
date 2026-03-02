@@ -41,6 +41,10 @@
 | task-29 (структуры данных: MinHeap, продвинутый) | ✅ |
 | task-30 (структуры данных: Disjoint Set / Union-Find, продвинутый) | ✅ |
 | task-31 (структуры данных: LFU Cache, продвинутый) | ✅ |
+| task-32 (бинарное дерево: BST, структура данных) | ✅ |
+| task-33 (бинарное дерево: алгоритмы — обходы, maxDepth, isBalanced, isBST) | ✅ |
+| task-34 (JavaScript: Tagged Template Literals) | ✅ |
+| task-35 (JavaScript: AbortController / AbortSignal) | ✅ |
 
 ## Структура
 
@@ -156,6 +160,18 @@
 - `task-31/` - Структуры данных: LFU Cache (Least Frequently Used), продвинутый уровень
   - `task-31-data-structures-lfu-cache.js` - класс LFUCache: get, set
   - `task-31-data-structures-lfu-cache.test.js` - тесты для задачи
+- `task-32/` - Бинарное дерево: BST (структура данных), продвинутый уровень
+  - `task-32-binary-tree-structure.js` - TreeNode, BinarySearchTree: insert, search, min, max
+  - `task-32-binary-tree-structure.test.js` - тесты для задачи
+- `task-33/` - Бинарное дерево: алгоритмы (обходы, свойства), продвинутый уровень
+  - `task-33-binary-tree-algorithms.js` - inorder, preorder, postorder, maxDepth, isBalanced, isBST
+  - `task-33-binary-tree-algorithms.test.js` - тесты для задачи
+- `task-34/` - JavaScript: Tagged Template Literals (продвинутый уровень)
+  - `task-34-advanced-js-tagged-templates.js` - html, sql, upper — теги для шаблонных строк
+  - `task-34-advanced-js-tagged-templates.test.js` - тесты для задачи
+- `task-35/` - JavaScript: AbortController / AbortSignal (продвинутый уровень)
+  - `task-35-advanced-js-abort-controller.js` - createAbortablePromise, delay, fetchWithTimeout
+  - `task-35-advanced-js-abort-controller.test.js` - тесты для задачи
 
 ## Установка
 
@@ -238,6 +254,10 @@ npx ts-node task-15/task-15-typescript.ts
 - ✅ Структуры данных: MinHeap (куча минимума), продвинутый — task-29
 - ✅ Структуры данных: Disjoint Set (Union-Find), продвинутый — task-30
 - ✅ Структуры данных: LFU Cache, продвинутый — task-31
+- ✅ Бинарное дерево: BST (структура данных) — task-32
+- ✅ Бинарное дерево: алгоритмы (обходы, maxDepth, isBalanced, isBST) — task-33
+- ✅ JavaScript: Tagged Template Literals — task-34
+- ✅ JavaScript: AbortController / AbortSignal — task-35
 
 ## Инструменты
 
